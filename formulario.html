@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title> Formulário de Login e Registro com HTML5 e CSS3</title>
-  <meta name="viewport" content="width=device-width, initical-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="estilo.css" />
 
   <script language="javascript" type="text/javascript">
@@ -12,30 +12,30 @@
         var email_cadastro = formCadastro.email_cad.value;
         var senha_cadastro = formCadastro.senha_cad.value;        
     
-    if (nome_cadastro == " ") {
+    if (nome_cadastro == "") {
         alert ('Preencha o campo com seu nome!');
         formCadastro.nome_cad.focus();
         return false;
     }
-    if (email_cadastro == " "){
+    if (email_cadastro == ""){
         alert('Preencha o campo com email');
         formCadastro.email_cad.focus();
         return false;
     }
     if (senha_cadastro == "" || senha_cadastro.length <6){
-      alert('Preencha o campo com sua senha! (mínimo de 6 e máximo de 8 caracteres)');
+        alert('Preencha o campo com sua senha! (mínimo de 6 e máximo de 8 caracteres)');
       formCadastro.senha_cad.focus();
       return false;
     }
     else {
-            alert('Usuário cadastrado com sucesso! \n O e-mail do cadastro'+
+        alert('Usuário cadastrado com sucesso! \n O e-mail do cadastro '+
             email_cadastro+' terá que ser validado! \n Favor confirmar o cadastrono seu email');
     }
     }
     function validarLogin(){
         var email_login = formLogin.email_login.value;
         var senha_login = formLogin.senha_login.value;
-        if(email_login == " "){
+        if(email_login == ""){
            alert ('Preencha o campo com seu email para logar!');
            formLogin.email_login.focus();
            return false;
@@ -79,7 +79,7 @@
                 </p>
 
                 <p>
-                    <imput type="submit" value="Logar"
+                    <input type="submit" value="Logar"
                                             onclick="return validarLogin()"/>
                 </p>
 
@@ -91,11 +91,11 @@
         </div>
         <!--FORMULÁRIO DE CADASTRO-->
         <div id="cadastro">
-            <from name="formCadastro" method="post" action="">
+            <form name="formCadastro" method="post" action="">
                 <h1>Cadastro</h1>
 
                 <p>
-                    <label form="nome_cad">Seu Nome</label>
+                    <label for="nome_cad">Seu Nome</label>
                     <input id="nome_cad" name="nome_cad" required="required"
                     type="text" placeholder="nome" />
                 </p>
@@ -114,14 +114,14 @@
 
                 <p>
                     <input type="submit" value="Cadastrar" 
-                                            onclick="validarCadastro()"/>
+                                            onclick="return validarCadastro()"/>
                 </p>
 
                 <p class="link">
                    Já tem conta?
                    <a href="#paralogin"> Ir para Login</a> 
                 </p>
-            </from>
+            </form>
         </div>
     </div>
 </div>
