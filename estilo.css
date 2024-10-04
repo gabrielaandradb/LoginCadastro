@@ -176,7 +176,7 @@ input[type="submit"]:hover{
 #paralogin:target ~ .content #login{
     z-index: 2;
     -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInleft;
+    animation-name: fadeInLeft;
 
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
