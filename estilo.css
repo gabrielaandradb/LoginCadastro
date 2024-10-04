@@ -7,12 +7,12 @@
 
 /*remove a linha dos links*/
 a{
-    text-decoration: nome;
+    text-decoration: none;
 }
 
 /*esconde as ancoras da tela*/
 a.links{
-    display: nome;
+    display: none;
 }
 
 .content{
@@ -72,7 +72,7 @@ textarea:-moz-placeholder{
 }
 
 input{
-    outline: nome;
+    outline: none;
 }
 
 /*estilo dos input, menos o checkbox*/
@@ -222,7 +222,7 @@ input[type="submit"]:hover{
     }
 }
 
-@keyframes FadeOutLeft {
+@keyframes fadeOutLeft {
     0%{
         opacity: 1;
         transform: translateX(0);
